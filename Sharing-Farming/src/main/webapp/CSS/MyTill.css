@@ -1,0 +1,129 @@
+.SearchMyTill{
+    position: relative;
+    margin: 4px auto;
+    border-style: solid;
+    border-color: white;
+}
+.SearchMyTill-form{
+    margin-right: 8px;
+    float: right;
+    padding: 1px 0 0 0;
+}
+.SearchMyTill-form input{
+    border-style: solid;
+    border-color: #a4a4a6;
+    border-radius: 5px;
+    font-size: 12px;
+}
+.SearchMyTill-form button{
+    font-size: 14px;
+    border: none;
+    background-color: transparent;
+    color: #166ece;
+}
+.SearchMyTill-form button:hover{
+    text-decoration: underline;
+    color: #0062d3;
+}
+.MyFarming{
+    min-height: 400px;
+    min-width: 900px;
+}
+.MyFarming_Head{
+    text-align: center;
+    color: #3b3b3d;
+}
+.MySFarming{
+    position: relative;
+    display: flex;
+    background: #f5f5f7;
+    color: #3b3b3c;
+    margin: 27px 190px 27px 190px;
+    padding: 14px 14px 14px 14px;
+    border-radius:12px;
+    border: 1px solid white;
+    transition: all 0.45s;
+}
+.MySFarming:hover{
+    box-shadow: 1px 1px 10px #a4a4a6;
+    border: 1px solid white;
+    border-radius:12px;
+    transform: scale(1.02);
+}
+.MyMFarming{
+    position: relative;
+    display: flex;
+    background: #f5f5f7;
+    color: #3b3b3c;
+    margin: 27px 90px 27px 90px;
+    padding: 14px 14px 14px 14px;
+    border-radius:12px;
+    border: 1px solid white;
+    transition: all 0.45s;
+}
+.MyMFarming:hover{
+    box-shadow: 1px 1px 10px #a4a4a6;
+    border: 1px solid white;
+    border-radius:12px;
+    transform: scale(1.02);
+}
+table{
+    text-align: center;
+    border-spacing: 0;
+    border: 1px solid gray;
+    color: #28282a;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+}
+th,td{
+    border: 0.01px solid gray;
+    text-align: center;
+    color: #28282a;
+    font-size: 18px;
+}
+th{
+    padding:5px;
+    background: lightgray;
+    color: #28282a;
+}
+.MyFarming button{
+    font-size: 18px;
+    border: none;
+    background-color: transparent;
+    color: #166ece;
+}
+.MyFarming button:hover{
+    text-decoration: underline;
+    color: #0062d3;
+}
+.MyFarming a{
+    font-size: 18px;
+    text-decoration: none;
+    color: #166ece;
+}
+.MyFarming a:visited{
+    color: #166ece;
+}
+.MyFarming a:hover{
+    text-decoration: underline;
+    color: #0062d3;
+}
+.form-input{
+    font-size: 18px;
+    width: 140px;
+}
+.alart{
+    color: #f53c3c;
+}
+.ts a{
+    text-decoration: none;
+    color: #166ece;
+}
+.ts a:visited{
+    color: #166ece;
+}
+.ts a:hover{
+    text-decoration: underline;
+    color: #0062d3;
+}

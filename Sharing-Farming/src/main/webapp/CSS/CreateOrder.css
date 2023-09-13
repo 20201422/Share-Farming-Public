@@ -1,0 +1,90 @@
+@charset "UTF-8";
+.createorder{
+	min-width: 900px;
+}
+.first,.second,.third,.forth,.fifth{
+	display: flex;
+	margin: 2px 270px 20px 270px;
+	padding: 4px 0 4px 0;
+	position: relative;
+	background: #f5f5f7;
+	color: #3b3b3c;
+	border-radius:12px;
+	border: 1px solid white;
+	transition: all 0.45s;
+}
+.first:hover,.second:hover,.third:hover,.forth:hover,.fifth:hover{
+	box-shadow: 1px 1px 10px #a4a4a6;
+	border: 1px solid white;
+	border-radius:12px;
+	transform: scale(1.02);
+}
+.h4{
+	margin: 0 auto;
+	text-align: center;
+	color: #3b3b3d;
+	font-size: 22px;
+}
+#div1,#shou,#zhi,#pei,.caozuo{
+	position: relative;
+	margin: 0 auto;
+}
+table{
+	display: flex;
+}
+#c3{
+	display: flex;
+	line-height: 27px;
+}
+input{
+	border-style: solid;
+	border-color: #a4a4a6;
+	border-radius: 5px;
+	font-size: 12px;
+}
+#que{
+	margin: 0 40px 0 40px;
+	width: auto;
+	height:30px;
+	border: 2px solid #21BF73;
+	background-color: white;
+	color: #21BF73;
+	border-radius: 4px;
+	font-weight: 600;
+}
+#que:hover{
+	color:white;
+	background-color: #21BF73;
+}
+#qu{
+	margin: 0 40px 0 40px;
+	width: auto;
+	height:30px;
+	border: 2px solid #FF0000;
+	background-color: white;
+	color: #FF0000;
+	border-radius: 4px;
+	font-weight: 600;
+}
+#qu:hover {
+	color:white;
+	background-color:#FF0000;
+}
+/*body{*/
+/*	background:url("img/z0.png") center/cover;*/
+/*	background-repeat: no-repeat;*/
+/*	background-size: 100% 100%;*/
+/*	background-attachment: fixed;*/
+/*}*/
+span{
+	font-size: 0;
+	font-family: "楷体";
+}
+th,td{
+	padding: 0 40px 0 40px;
+	text-align: center;
+}
+.second #shou #c3 th,td{
+	padding: 0 20px 0 20px;
+	text-align: center;
+}

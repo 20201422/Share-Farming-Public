@@ -1,0 +1,80 @@
+.head_welcome{
+    background: #444;
+    color: #d7d7d7;
+    font-size: 14px;
+    padding: 1px 0 1px 27px;
+}
+.head_welcome a{
+    color: #d7d7d7;
+    transition:color 0.2s linear 0s ;
+    -moz-transition:color 0.2s linear 0s ; /* Firefox 4 */
+    -webkit-transition:color 0.2s linear 0s ; /* Safari 和 Chrome */
+    -o-transition:color 0.2s linear 0s ; /* Opera */
+}
+.head_welcome a:visited{
+    color: #d7d7d7;
+}
+.head_welcome a:hover{
+    color: white;
+}
+.header{
+    text-align: center;
+    padding: 2px 0 8px 0;
+    background: rgba(0,0,0,0.8);
+    color: #d7d7d7;
+    font-size: 50px;
+}
+.menu{
+    text-align: center;
+    background: rgba(0,0,0,0.8);
+    /*border-style: solid;*/
+}
+.menu p{
+    display: inline-block;
+    margin: 0 40px 0 40px;
+    font-size: 20px;
+}
+.menu p a{
+    color: #d7d7d7;
+    text-decoration: none;
+    transition:color 0.2s linear 0s ;
+    -moz-transition:color 0.2s linear 0s ; /* Firefox 4 */
+    -webkit-transition:color 0.2s linear 0s ; /* Safari 和 Chrome */
+    -o-transition:color 0.2s linear 0s ; /* Opera */
+}
+.menu p a:visited{
+    color: #d7d7d7;
+}
+.menu p a:hover{
+    text-decoration: none;
+    color: white;
+}
+.ts{
+    text-align: center;
+    padding: 10px 0 10px 0;
+    font-size: 14px;
+    background: #f5f5f7;
+    color: #201413;
+}
+.footer-help{
+    background-color: white;
+    padding: 10px 0 10px 80px;
+    font-size: 20px;
+    color: #3b3b3d;
+}
+.footer{
+    overflow: hidden;
+    bottom: 0;
+    margin: 0 0 0 0;
+    padding: 10px 80px 20px 80px;
+    background: #f5f5f7;
+    color: #8a8a8c;
+    text-align: left;
+    font-size: 10px;
+}
+.footer p{
+    color: #8a8a8c;
+}
+header,footer{
+    min-width: 900px;
+}

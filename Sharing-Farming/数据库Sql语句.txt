@@ -1,0 +1,224 @@
+drop table Users;
+create table Users
+(
+    Uno varchar(20) primary key,
+    Una varchar(20),
+    Upwd varchar(20),
+    Uemil varchar(100),
+    Ust int//0为用户，1为会员
+);
+drop table Land;
+create table Land
+(
+    Lno varchar(20) primary key,
+    Lna varchar(20),
+    Lst int,//(0-未租出，1-待审核，2-待支付，3-已租出）
+    Lpr float,
+    Lar int,
+    Lpo varchar(20),
+    Lmg varchar(100)
+);
+create table Admins
+(
+    Ano varchar(20) primary key,
+    Apwd varchar(20)
+);
+drop table ORDERS;
+select * from ORDERS;
+create table Orders
+(
+    Ono int auto_increment   primary  key,
+    QuHuoFangShi int,
+    Uno varchar(20),
+    Contact varchar(20),
+    Address varchar(50),
+    Price float,
+    UName varchar(20)
+);
+drop table ShopOrderDetails;
+select * from ShopOrderDetails;
+create table ShopOrderDetails
+(
+    Ono int,
+    Cna varchar(20),
+    Num int,
+    primary key (Ono,Cna)
+);
+drop table Goods;
+select * from Goods;
+create table Goods
+(
+    Cna varchar(20) primary key,
+    Cpr float,
+    LocalUrl varchar(50),
+    Num int
+);
+drop table SHOPCAR;
+select * from SHOPCAR;
+create table ShopCar
+(
+    Uno varchar(20),
+    Cna varchar(20),
+    Num int,
+    primary key (Uno,Cna)
+);
+insert into Goods values('白菜',5,'Image/BaiCai.jpg',1);
+insert into Goods values('胡萝卜',5,'Image/carrot.jpg',1);
+insert into Goods values('韭菜',5,'Image/cftddrtmsdt.jpg',1);
+insert into Goods values('黄瓜',5,'Image/cucumber.jpg',1);
+insert into Goods values('小番茄',5,'Image/FanQie.jpg',1);
+insert into Goods values('香瓜',5,'Image/fghfgfg.jpg',1);
+insert into Goods values('黄桃',5,'Image/fsdgdsfg.jpg',1);
+insert into Goods values('西葫芦',5,'Image/fvbbbnmvbz.jpg',1);
+insert into Goods values('蓝莓',5,'Image/gfhnfghgg.jpg',1);
+insert into Goods values('油桃',5,'Image/jhdzsf.jpg',1);
+insert into Goods values('芒果',5,'Image/MangGuo.jpg',1);
+insert into Goods values('木瓜',5,'Image/njmmfn.jpg',1);
+insert into Goods values('黑布林李子',5,'Image/sdffgnf.jpg',1);
+insert into Goods values('西红柿',5,'Image/tomatoes.jpg',1);
+insert into Goods values('土豆',5,'Image/TuDou.jpg',1);
+insert into Goods values('南瓜',5,'Image/Vbdtb.jpg',1);
+insert into Goods values('沃柑',5,'Image/WoGang.jpg',1);
+insert into Goods values('夏橙',5,'Image/XiaCheng.jpg',1);
+insert into Goods values('杨桃',5,'Image/YangTao.jpg',1);
+DROP TABLE IF EXISTS SFARMING;
+create table Sfarming
+(
+    Lno varchar(20),
+    Uno varchar(20),
+    Lday int,
+    Ltp float,
+    primary key(Lno,Uno),
+    foreign key(Lno) references Land(Lno),
+    foreign key(Uno) references Users(Uno)
+);
+DROP TABLE IF EXISTS MFARMING;
+create table Mfarming
+(
+    Lno varchar(20),
+    Uno varchar(20),
+    Ano varchar(20),
+    Lday int,
+    Ltp float,
+    primary key(Lno,Uno,Ano),
+    foreign key(Lno) references Land(Lno),
+    foreign key(Uno) references Users(Uno),
+    foreign key(Ano) references Admins(Ano)
+);
+drop table Plant;
+create table Plant
+(
+    Pno varchar(20) primary key,
+    Pna varchar(20)
+);
+drop table Farming;
+create table Farming
+(
+    Lno varchar(20),//土地编号
+    Uno varchar(20),//会员编号
+    Ano varchar(20),//代种人员编号
+    Pno varchar(20),//植物编号
+    Fday int,//耕种天数
+    Ftp varchar(20),//支付方式（1-微信，2-支付宝，3-云闪付，4-Apple Pay）
+    Fst varchar(20) not null,//耕种类型（0-自行耕种、1-托管代种）
+    primary key(Lno,Uno),
+    foreign key(Lno) references Land(Lno),
+    foreign key(Uno) references Users(Uno)
+);
+
+drop table Report;
+create table Report
+(
+    Lno varchar(20),//土地编号
+    Pna varchar(20),
+    Ano varchar(20),//代种人员编号
+    Work varchar(50),
+    Date varchar(20),
+    Detail varchar(1000)
+);
+insert into Users values('001','堃芃1','123456','2427431300@qq.com',1);
+insert into Users values('002','堃芃2','123456','2427431300@qq.com',0);
+insert into Users values('003','堃芃3','123456','2427431300@qq.com',0);
+insert into Users values('004','堃芃4','123456','2427431300@qq.com',1);
+insert into Land values('240001','土地一号',0,9.9,100,'Land_1.jpeg','来自内蒙古的黄土，适合种植马铃薯、玉米等');
+insert into Land values('240002','土地二号',0,14.9,200,'Land_2.jpeg','来自辽宁的红土，适合种植小麦、玉米等');
+insert into Land values('240003','土地三号',0,19.9,300,'Land_3.jpeg','来自山东的黄土，适合大豆、高粱等');
+insert into Land values('240004','土地四号',0,24.9,400,'Land_4.jpeg','来自浙江的黄土，适合种植棉花、西瓜等');
+insert into Land values('240005','土地五号',0,9.9,100,'Land_5.jpeg','来自吉林的红土，适合种植水稻、大豆等');
+insert into Land values('240006','土地六号',0,14.9,200,'Land_6.jpeg','来自陕西的黄土，适合种植小麦、石榴等');
+insert into Land values('240007','土地七号',0,19.9,300,'Land_7.jpeg','来自海南的黄土，适合种植芋头、荔枝等');
+insert into Land values('240008','土地八号',0,24.9,400,'Land_8.jpeg','来自江西的黄土，适合种植芝麻、脐橙');
+update Land set Lmg='来自内蒙古的黄土，适合种植马铃薯、玉米等' where Lno='240001';
+update Land set Lmg='来自辽宁的红土，适合种植小麦、玉米等' where Lno='240002';
+update Land set Lmg='来自山东的黄土，适合大豆、高粱等' where Lno='240003';
+update Land set Lmg='来自浙江的黄土，适合种植棉花、西瓜等' where Lno='240004';
+update Land set Lmg='来自吉林的红土，适合种植水稻、大豆等' where Lno='240005';
+update Land set Lmg='来自陕西的黄土，适合种植小麦、石榴等' where Lno='240006';
+update Land set Lmg='来自海南的黄土，适合种植芋头、荔枝等' where Lno='240007';
+update Land set Lmg='来自江西的黄土，适合种植芝麻、脐橙' where Lno='240008';
+insert into Farming values('240001','001','','',1,'微信','自行耕种');
+insert into Farming values('240004','003','','',1,'','自行耕种');
+insert into Plant values ('270001','高粱');
+insert into Plant values ('270002','花生');
+insert into Plant values ('270003','玉米');
+insert into Plant values ('270004','小麦');
+insert into Plant values ('270005','大豆');
+insert into Plant values ('270006','其它');
+insert into Admins values ( '管理员','123456' );
+insert into Report values ( '240006','玉米','gly','耕地1234567890','2022年5月1日到2022年5月7日','耕地耕地耕地耕地耕地耕' ||
+                                                                                     '地耕地耕地耕地耕地耕地耕' ||
+                                                                                     '地耕地耕地耕地耕' ||
+                                                                                     '地耕地耕地耕地耕地耕' ||
+                                                                                     '地耕地耕地耕地耕地耕地耕地' );
+    update Users set Una='堃芃1' where Uno='001';
+select Farming.Lno,Lna,Lar,Lpr,Fday,Ftp,Lst
+from Land,Farming
+where Land.Lno=Farming.Lno and Fst='自行耕种';
+
+select Lna from Farming,Land where Farming.Lno=Land.Lno and Uno='001'and Lna='土地一号';
+
+select Farming.Lno,Lna,Lar,Lpr,Farming.Pno,Pna,Farming.Ano,Fday,Ftp,Lst
+from Land,Farming,Plant
+where Land.Lno=Farming.Lno and Plant.Pno=Farming.Pno and Fst='托管代种';
+
+select Farming.Lno,Lna,Lar,Lpr,Fday,Ftp,Lst,Lpo from Land,Farming where Land.Lno=Farming.Lno and Fst='自行耕种';
+
+update Land set Lst=2 where Lno='240002';
+delete from Land where Lna='土地九号';
+delete from Farming where Lno='240005' and Lno='003';
+
+update Farming set Fday=Fday+1,pno='270005',Ftp='支付宝' where Lno='240003';
+
+select Farming.Lno,Lna,Lar,Lpr,Farming.Pno,Pna,Farming.Ano,Fday,Ftp,Lst,Lpo
+from Land,Farming,Plant
+where Land.Lno=Farming.Lno and Plant.Pno=Farming.Pno and Fst='托管代种';
+
+select *
+from Farming;
+
+select *
+from Plant;
+
+select *
+from Land;
+select Lno,Lna,Lst,Lpr,Lar,Lpo from Land;
+
+select *
+from Users;
+
+select *
+from Report;
+
+select *
+from Admins;
+
+select *
+from Goods;
+
+
+delete from Users where Uno='011a_';
+update Land set Lst=0 where  Lst=1;
+update Land set Lno='240001' where  Lna='土地一号';
+update Land set Lst=2 where  Lna='土地七号';
+
+update Users set Ust=0 where Uno='002';

@@ -1,0 +1,63 @@
+.info{
+    min-height: 400px;
+}
+.Head{
+    text-align: center;
+    color: #3b3b3d;
+}
+.xg{
+    text-align:center;
+    position: relative;
+    background: #f5f5f7;
+    color: #3b3b3c;
+    margin: 27px 400px 27px 400px;
+    padding: 14px 14px 14px 14px;
+    border-radius:12px;
+    border: 1px solid white;
+    transition: all 0.45s;
+    font-size: 22px;
+    min-width: 400px;
+}
+.xg:hover{
+    box-shadow: 1px 1px 10px #a4a4a6;
+    border: 1px solid white;
+    border-radius:12px;
+    transform: scale(1.02);
+}
+.itxt{
+    width:240px;
+    font-size: 20px;
+    border-style: solid;
+    border-color: #a4a4a6;
+    border-radius: 5px;
+}
+#sub_btn{
+    font-size: 22px;
+    border: none;
+    background-color: transparent;
+    color: #166ece;
+}
+#sub_btn:hover{
+    text-decoration: underline;
+    color: #0062d3;
+}
+.cz{
+    font-size: 22px;
+    text-decoration: none;
+    color: #166ece;
+}
+.cz:visited{
+    color: #166ece;
+}
+.cz:hover{
+    text-decoration: underline;
+    color: #0062d3;
+}
+.errorMsg{
+    color: #f53c3c;
+    width:100%;
+    text-align:center;
+    align-content: center;
+    margin: 2px auto;
+    display:inline-block;
+}
